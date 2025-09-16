@@ -45,13 +45,38 @@ pip install -e src
 
 ## Training
 
-To start the training process, use the following command:
+### Quick Start with Google Colab
+
+For easy setup and experimentation, use our Google Colab notebook:
+
+📓 **[DiffPhysDrone_MultiAgent_Colab.ipynb](./DiffPhysDrone_MultiAgent_Colab.ipynb)**
+
+This notebook provides:
+- Complete multi-agent simulation with obstacles
+- Automatic dependency installation
+- Interactive visualization
+- Step-by-step tutorial
+- Customizable scenarios
+
+See [COLAB_USAGE.md](./COLAB_USAGE.md) for detailed instructions.
+
+### Local Training
+
+To start the training process locally, use the following command:
 
 ```bash
 # For multi-agemt
 python main_cuda.py $(cat configs/multi_agent.args)
 # For single-agemt
 python main_cuda.py $(cat configs/single_agent.args)
+```
+
+### Demo Script
+
+For a simplified local demo:
+
+```bash
+python multi_agent_demo.py --batch_size 32 --num_iters 1000
 ```
 
 ## Evaluation
